@@ -7,7 +7,7 @@
 ##  COMPANY VARIABLES  ##
 #########################
 $RDT_DIR = "C:\COMPANY";                    $RDT_DEPLOY = "C:\COMPANY\Deploy";    
-$ITNT_LOGS = "C:\COMPANY\Logs";             $7ZIP_DIR = "C:\COMPANY\Deploy\7Zip";
+$RDT_LOGS = "C:\COMPANY\Logs";             $7ZIP_DIR = "C:\COMPANY\Deploy\7Zip";
 $7ZIP_64DWNLD = "https://example.com/EXE/7z1900-x64.msi"
 $7ZIP_32DWNLD = "https://example.com/EXE/7z1900-x32.msi"
 $7ZIP_REG = "https://raw.githubusercontent.com/ITNinjaz-Technology/RDT/main/7-ZIP-FileAssoc.reg"
