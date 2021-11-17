@@ -10,7 +10,7 @@ The second script is an example of deployment of software created from the tutor
 
 + 2. powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/deploy/561651/Install-7ZIP.ps1 -Outfile C:\COMPANY\Deploy\Install-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Install-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Install-7ZIP.ps1
 
-+ 23. powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/deploy/561651/Uninstall-7ZIP.ps1 -Outfile C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Uninstall-7ZIP.ps1
++ 3. powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/deploy/561651/Uninstall-7ZIP.ps1 -Outfile C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Uninstall-7ZIP.ps1
 
 
 #  DEFINITIONS   
