@@ -1,16 +1,30 @@
 # RDT
-Full Powershell Deployment Script Repository Based on @PSAppDeployToolkit and Jason Bergner (https://silentinstallhq.com). This repo is to make it easier to deploy scripts and installations of software easier. All modifications are done so under the same GNU Lesser General Public License by @PSAppDeployToolkit
+Full Powershell Deployment Script Repository Based on @PSAppDeployToolkit and Jason Bergner (https://silentinstallhq.com). This repo is to make it easier to deploy scripts and installations of software easier. All modifications are done so under the same GNU Lesser General Public License by @PSAppDeployToolkit.
 
-# Deploymnet (INSTALL)
-Deployment Scripts Below will work for deploying the software or configurations. The first order is to create the temporary deployment folder and these steps asume you have the ability to pass script to a machine by reverse shell or logon scripts. After creating the directory for temporary use we download the the setup script, then unblock it, and than we deploy the script with a bypass method (Not Security Software may detect this as malicous). Also Make sure to change COMPANY to your company name.
+# ANTI-VIRUS NOTE!
+The script uses the Powershell Execution Piolicy bypass which is a method both administrators and Hackers use except most administrators usually use it in testing and then sign theire script also whitelisting it before deployment. Take this notice as you wish but this script is not malcious but as many tools it can be used to deploy malware but that is inherted from @PSAppDeployToolkit and my use of the Powersehll bypass which is well documented on the potential for abuse. It is a false positive but I am not responsible for anything that happens to your machines. This upload is for educational use only.
 
-The second script is an example of deployment of software created from the tutorial for 7Zip deployment from SilentDeployHQ.com. The Third Script is to Uninstall
+# Deploymnet (INSTALL / UNINSTALL)
+Deployment is do using a customized script that Automates the process documented on SilentInstallHQ (Owned by Jason Bergner) and the setps on their are customized from the @PSAppDeployToolkit  and to make it even easier to deploy to each machine you only need the included example files and a location to host the download urls for the executables which is documented in the install and uninstall script. Below is an example of a one line powershell you can deploy to each target machine to recieve the deployment. The script does use some methods Hackers use to get the installation completed such as bypassing powershell execution policy.
 
-+ 1. mkdir C:\Windows\Temp\COMPANY\ && powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/Setup.ps1 -Outfile C:\Windows\Temp\COMPANY\Setup.ps1; Unblock-File -Path C:\Windows\Temp\COMPANY\Setup.ps1 powershell -ExecutionPolicy Bypass -File C:\Windows\Temp\COMPANY\Setup.ps1
+First you Run #1 and then the Install deployment (#2 and/or #4 to install those programs) and you can run the Uninstall deployment if you want (#3 and/or #5)
 
-+ 2. powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/deploy/561651/Install-7ZIP.ps1 -Outfile C:\COMPANY\Deploy\Install-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Install-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Install-7ZIP.ps1
+# 1. Inital Setup
+ * mkdir C:\Windows\Temp\COMPANY\ && powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/Setup.ps1 -Outfile C:\Windows\Temp\COMPANY\Setup.ps1; Unblock-File -Path C:\Windows\Temp\COMPANY\Setup.ps1 powershell -ExecutionPolicy Bypass -File C:\Windows\Temp\COMPANY\Setup.ps1
+ 
+# 2. Install Driver Booster (Universal Script)
+ * powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/RDT/main/Deploy/Install-DriverBooster.ps1 -Outfile C:\COMPANY\Deploy\Install-DriverBooster.ps1; Unblock-File -Path C:\COMPANY\Deploy\Install-DriverBooster.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Install-DriverBooster.ps1
 
-+ 3. powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/PSSD/main/deploy/561651/Uninstall-7ZIP.ps1 -Outfile C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Uninstall-7ZIP.ps1
+
+# 3. Uninstall Driver Booster (Universal Script)
+ * powershell Invoke-WebRequest -Uri https://raw.githubusercontent.com/ITNinjaz-Technology/RDT/main/Deploy/Uninstall-DriverBooster.ps1 -Outfile C:\COMPANY\Deploy\Uninstall-DriverBooster.ps1; Unblock-File -Path C:\COMPANY\Deploy\Uninstall-DriverBooster.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Uninstall-DriverBooster.ps1
+ 
+# 4. Install 7Zip Example (customized)
+ * powershell Invoke-WebRequest -Uri https://github.com/ITNinjaz-Technology/RDT/blob/main/Deploy/Install - DriverBooster.ps1 -Outfile C:\COMPANY\Deploy\Install-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Install-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Install-7ZIP.ps1
+ 
+# 5. Uninstall 7Zip Example (Customized)
+ * powershell Invoke-WebRequest -Uri https://github.com/ITNinjaz-Technology/RDT/blob/main/Deploy/Install - DriverBooster.ps1 -Outfile C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; Unblock-File -Path C:\COMPANY\Deploy\Uninstall-7ZIP.ps1; powershell -ExecutionPolicy Bypass -File C:\COMPANY\Deploy\Uninstall-7ZIP.ps1
+
 
 
 #  DEFINITIONS   
